@@ -49,12 +49,12 @@ const RARITY_MYTHIC = 4
 
 static func get_rarity_color(rarity: int) -> Color:
 	match rarity:
-		0: return Color.GRAY
-		1: return Color.DODGER_BLUE
-		2: return Color.MEDIUM_PURPLE
-		3: return Color.GOLD
-		4: return Color.HOT_PINK
-	return Color.GRAY
+		0: return Color(0.004, 0.353, 0.220)
+		1: return Color(0.008, 0.773, 0.478)
+		2: return Color(0.004, 0.573, 0.357)
+		3: return Color(0.973, 0.996, 0.024)
+		4: return Color(0.973, 0.996, 0.024)
+	return Color(0.004, 0.353, 0.220)
 
 static func get_rarity_name(rarity: int) -> String:
 	match rarity:
@@ -79,27 +79,27 @@ enum ItemType { BALL, EAGLE, STADIUM, JERSEY, TROPHY, STAR }
 
 static func get_item_color(item: ItemType) -> Color:
 	match item:
-		ItemType.BALL: return Color(0.0, 0.41, 0.22)
-		ItemType.EAGLE: return Color(0.89, 0.68, 0.0)
-		ItemType.STADIUM: return Color(0.3, 0.3, 0.35)
+		ItemType.BALL: return Color(0.008, 0.773, 0.478)
+		ItemType.EAGLE: return Color(0.973, 0.996, 0.024)
+		ItemType.STADIUM: return Color(0.004, 0.573, 0.357)
 		ItemType.JERSEY: return Color(1.0, 1.0, 1.0)
-		ItemType.TROPHY: return Color(0.85, 0.65, 0.13)
-		ItemType.STAR: return Color(1.0, 0.84, 0.0)
+		ItemType.TROPHY: return Color(0.973, 0.996, 0.024)
+		ItemType.STAR: return Color(0.973, 0.996, 0.024)
 	return Color.WHITE
 
 # Seasons
 static func get_season_config() -> Array:
 	return [
-		{ "id": 1, "name": "Super League", "years": "2024-2026", "color": Color.GREEN, "count": 15 },
-		{ "id": 2, "name": "Liga 1 Modern", "years": "2021-2023", "color": Color.GREEN, "count": 15 },
-		{ "id": 3, "name": "Debut Liga 1", "years": "2018-2020", "color": Color.GREEN, "count": 15 },
-		{ "id": 4, "name": "ISC B & Liga 2", "years": "2015-2017", "color": Color.GREEN, "count": 15 },
-		{ "id": 5, "name": "Juara Umum", "years": "2012-2014", "color": Color.GOLDENROD, "count": 15 },
-		{ "id": 6, "name": "Profesional Awal", "years": "2008-2011", "color": Color.GOLDENROD, "count": 15 },
-		{ "id": 7, "name": "Gempa & Maguwoharjo", "years": "2005-2007", "color": Color.GOLDENROD, "count": 15 },
-		{ "id": 8, "name": "Puncak Prestasi", "years": "2001-2004", "color": Color.ORANGE, "count": 15 },
-		{ "id": 9, "name": "Promosi DU", "years": "1996-2000", "color": Color.ORANGE, "count": 15 },
-		{ "id": 10, "name": "Dominasi Div II", "years": "1990-1995", "color": Color.ORANGE, "count": 15 },
-		{ "id": 11, "name": "Fondasi", "years": "1983-1989", "color": Color.RED, "count": 15 },
-		{ "id": 12, "name": "Legenda 1976", "years": "1976-1982", "color": Color.RED, "count": 15 },
+		{ "id": 1, "name": "Super League", "years": "2024-2026", "color": Color(0.008, 0.773, 0.478, 1.0), "count": 15 },
+		{ "id": 2, "name": "Liga 1 Modern", "years": "2021-2023", "color": Color(0.008, 0.773, 0.478, 1.0), "count": 15 },
+		{ "id": 3, "name": "Debut Liga 1", "years": "2018-2020", "color": Color(0.008, 0.773, 0.478, 1.0), "count": 15 },
+		{ "id": 4, "name": "ISC B & Liga 2", "years": "2015-2017", "color": Color(0.008, 0.773, 0.478, 1.0), "count": 15 },
+		{ "id": 5, "name": "Juara Umum", "years": "2012-2014", "color": Color(0.973, 0.996, 0.024, 1.0), "count": 15 },
+		{ "id": 6, "name": "Profesional Awal", "years": "2008-2011", "color": Color(0.973, 0.996, 0.024, 1.0), "count": 15 },
+		{ "id": 7, "name": "Gempa & Maguwoharjo", "years": "2005-2007", "color": Color(0.973, 0.996, 0.024, 1.0), "count": 15 },
+		{ "id": 8, "name": "Puncak Prestasi", "years": "2001-2004", "color": Color(0.004, 0.573, 0.357, 1.0), "count": 15 },
+		{ "id": 9, "name": "Promosi DU", "years": "1996-2000", "color": Color(0.004, 0.573, 0.357, 1.0), "count": 15 },
+		{ "id": 10, "name": "Dominasi Div II", "years": "1990-1995", "color": Color(0.004, 0.573, 0.357, 1.0), "count": 15 },
+		{ "id": 11, "name": "Fondasi", "years": "1983-1989", "color": Color(0.973, 0.996, 0.024, 1.0), "count": 15 },
+		{ "id": 12, "name": "Legenda 1976", "years": "1976-1982", "color": Color(0.973, 0.996, 0.024, 1.0), "count": 15 },
 	]

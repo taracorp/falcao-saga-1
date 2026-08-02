@@ -66,7 +66,7 @@ func _flash_text(text: String) -> void:
 	var label = Label.new()
 	label.text = text
 	label.add_theme_font_size_override("font_size", 28)
-	label.add_theme_color_override("font_color", Color(1.0, 0.843, 0.0, 1.0))
+	label.add_theme_color_override("font_color", Color(0.973, 0.996, 0.024, 1.0))
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.position = Vector2(360, 600) - label.size / 2
 	add_child(label)
