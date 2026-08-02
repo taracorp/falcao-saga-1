@@ -17,9 +17,9 @@ func _connect_signals() -> void:
 	board.level_complete.connect(_on_level_complete)
 	board.combo_made.connect(_on_combo)
 
-	$HUD/HammerBtn.pressed.connect(func(): _use_powerup("hammer"))
-	$HUD/BombBtn.pressed.connect(func(): _use_powerup("bomb"))
-	$HUD/MovesBtn.pressed.connect(func(): _use_powerup("moves"))
+	$BottomBar/HammerBtn.pressed.connect(func(): _use_powerup("hammer"))
+	$BottomBar/BombBtn.pressed.connect(func(): _use_powerup("bomb"))
+	$BottomBar/MovesBtn.pressed.connect(func(): _use_powerup("moves"))
 
 func _on_score_changed(score: int) -> void:
 	score_label.text = "Score: %d" % score

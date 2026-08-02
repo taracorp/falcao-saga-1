@@ -1,21 +1,17 @@
 extends Control
-## Leaderboard display
 
 func _ready() -> void:
-	$BackButton.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/main.tscn"))
+	$TopBar/BackButton.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/main.tscn"))
 	_setup_tabs()
 	_load_leaderboard()
 
 func _setup_tabs() -> void:
-	$TabBar.add_tab("Weekly")
-	$TabBar.add_tab("Monthly")
-	$TabBar.add_tab("All-Time")
+	$MainVBox/TabBar.add_tab("Weekly")
+	$MainVBox/TabBar.add_tab("Monthly")
+	$MainVBox/TabBar.add_tab("All-Time")
 
 func _load_leaderboard() -> void:
-	_render_mock_leaderboard()
-
-func _render_mock_leaderboard() -> void:
-	$RankList/LoadingLabel.hide()
+	$MainVBox/ScrollContainer/RankList/LoadingLabel.hide()
 
 	var entries = [
 		{ "rank": 1, "name": "SlemanMania_1976", "xp": 12500, "cards": 45 },
@@ -31,11 +27,10 @@ func _render_mock_leaderboard() -> void:
 	]
 
 	for entry in entries:
-		$RankList.add_child(_make_rank_row(entry["rank"], entry["name"], entry["xp"], entry["cards"]))
+		$MainVBox/ScrollContainer/RankList.add_child(_make_rank_row(entry["rank"], entry["name"], entry["xp"], entry["cards"]))
 
-	# Show player's own rank
 	var player_name = GameManager.username if GameManager.username != "" else "You"
-	$YourRank.text = "Your Rank: #42 — %s | ⭐ %d XP | 📇 %d cards" % [player_name, GameManager.xp, GameManager.get_card_count()]
+	$MainVBox/YourRank.text = "Your Rank: #42 — %s | ⭐ %d XP | 📇 %d cards" % [player_name, GameManager.xp, GameManager.get_card_count()]
 
 func _make_rank_row(rank: int, name: String, xp: int, cards: int) -> Control:
 	var row = HBoxContainer.new()

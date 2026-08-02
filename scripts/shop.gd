@@ -6,28 +6,27 @@ enum Tab { POWERUPS, PACKS, REDEEM }
 var _current_tab: Tab = Tab.POWERUPS
 
 func _ready() -> void:
-	$BackButton.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/main.tscn"))
+	$TopBar/BackButton.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/main.tscn"))
 	_update_balance()
 	_setup_tabs()
 	_render_tab(Tab.POWERUPS)
 
 func _update_balance() -> void:
-	$BalanceLabel.text = "🪙 Coins: %d  |  💎 RPP: %d" % [GameManager.coins, GameManager.rpp]
+	$MainVBox/BalanceLabel.text = "🪙 Coins: %d  |  💎 RPP: %d" % [GameManager.coins, GameManager.rpp]
 
 func _setup_tabs() -> void:
-	$TabBar.add_tab("Power-Ups")
-	$TabBar.add_tab("Card Packs")
-	$TabBar.add_tab("Redeem RPP")
-	$TabBar.tab_changed.connect(_on_tab_changed)
+	$MainVBox/TabBar.add_tab("Power-Ups")
+	$MainVBox/TabBar.add_tab("Card Packs")
+	$MainVBox/TabBar.add_tab("Redeem RPP")
+	$MainVBox/TabBar.tab_changed.connect(_on_tab_changed)
 
 func _on_tab_changed(tab: int) -> void:
 	_render_tab(tab as Tab)
 
 func _render_tab(tab: Tab) -> void:
 	_current_tab = tab
-	for child in $ShopGrid.get_children():
+	for child in $MainVBox/ShopGrid.get_children():
 		child.queue_free()
-
 	match tab:
 		Tab.POWERUPS: _render_powerups()
 		Tab.PACKS: _render_packs()
@@ -41,7 +40,7 @@ func _render_powerups() -> void:
 		{ "name": "+3 Nyawa", "desc": "Refill 3 lives", "cost": 500, "icon": "❤️" },
 	]
 	for item in items:
-		$ShopGrid.add_child(_make_shop_item(item["name"], item["desc"], item["cost"], item["icon"], true, func():
+		$MainVBox/ShopGrid.add_child(_make_shop_item(item["name"], item["desc"], item["cost"], item["icon"], true, func():
 			if GameManager.spend_coins(item["cost"]):
 				if item["name"] == "+3 Nyawa":
 					for _i in range(3): GameManager.recover_life()
@@ -55,7 +54,7 @@ func _render_packs() -> void:
 		{ "name": "Season Pack", "desc": "5 cards, same season", "cost": 2000, "icon": "🎁" },
 	]
 	for item in items:
-		$ShopGrid.add_child(_make_shop_item(item["name"], item["desc"], item["cost"], item["icon"], true, func():
+		$MainVBox/ShopGrid.add_child(_make_shop_item(item["name"], item["desc"], item["cost"], item["icon"], true, func():
 			if GameManager.spend_coins(item["cost"]):
 				_open_pack(item["name"])
 				_update_balance()
@@ -65,7 +64,7 @@ func _render_redeem() -> void:
 	var info = Label.new()
 	info.text = "Loading rewards..."
 	info.add_theme_font_size_override("font_size", 16)
-	$ShopGrid.add_child(info)
+	$MainVBox/ShopGrid.add_child(info)
 
 	if SupabaseClient.is_logged_in():
 		SupabaseClient.fetch_rewards()
@@ -92,7 +91,7 @@ func _render_local_rewards() -> void:
 	]
 
 	for reward in rewards:
-		$ShopGrid.add_child(_make_redeem_item(reward["name"], reward["rpp"], reward["tier"]))
+		$MainVBox/ShopGrid.add_child(_make_redeem_item(reward["name"], reward["rpp"], reward["tier"]))
 
 func _make_shop_item(name: String, desc: String, cost: int, icon: String, use_coins: bool, callback: Callable) -> Control:
 	var panel = Panel.new()

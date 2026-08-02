@@ -8,21 +8,22 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_gameui")
 
 [node name="Background" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 720.0
-offset_bottom = 1280.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color(0.05, 0.05, 0.1, 1.0)
 
 [node name="TopBar" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 710.0
+layout_mode = 1
+anchors_preset = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
 offset_bottom = 50.0
 
 [node name="BackButton" type="Button" parent="TopBar"]
@@ -32,18 +33,21 @@ theme_override_font_sizes/font_size = 16
 
 [node name="MovesLabel" type="Label" parent="TopBar"]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
 text = "Moves: 20"
 
 [node name="ScoreLabel" type="Label" parent="TopBar"]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 theme_override_colors/font_color = Color(1.0, 0.843, 0.0, 1.0)
 text = "Score: 0"
 
 [node name="TargetLabel" type="Label" parent="TopBar"]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 theme_override_colors/font_color = Color(0.7, 0.7, 1.0, 1.0)
 text = "Target: 1000"
@@ -51,24 +55,29 @@ text = "Target: 1000"
 [node name="BoardNode" type="Node2D" parent="."]
 script = ExtResource("2_board")
 
-[node name="HUD" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 1220.0
-offset_right = 710.0
-offset_bottom = 1270.0
+[node name="BottomBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
 
-[node name="HammerBtn" type="Button" parent="HUD"]
+[node name="HammerBtn" type="Button" parent="BottomBar"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "🔨 150"
 theme_override_font_sizes/font_size = 14
 
-[node name="BombBtn" type="Button" parent="HUD"]
+[node name="BombBtn" type="Button" parent="BottomBar"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "💣 300"
 theme_override_font_sizes/font_size = 14
 
-[node name="MovesBtn" type="Button" parent="HUD"]
+[node name="MovesBtn" type="Button" parent="BottomBar"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "+5 200"
 theme_override_font_sizes/font_size = 14

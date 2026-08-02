@@ -32,6 +32,13 @@ window/size/viewport_height=1280
 window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/stretch/scale_mode="fractional"
+window/handheld/orientation=0
+window/handheld/use_native_borderless=true
+
+[rendering]
+
+quality/driver/driver_name="GLES3"
 
 [input_devices]
 

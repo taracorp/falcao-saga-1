@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://mainmenu001"]
+[gd_scene load_steps=2 format=3 uid="uid://mainmenu001"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_main"]
 
@@ -7,109 +7,116 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_main")
 
 [node name="Background" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 720.0
-offset_bottom = 1280.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color(0.0, 0.408, 0.216, 1.0)
 
-[node name="TitleContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 60.0
-offset_right = 660.0
-offset_bottom = 360.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="TitleLabel" type="Label" parent="TitleContainer"]
+[node name="VBox" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 42
 theme_override_colors/font_color = Color(1.0, 0.843, 0.0, 1.0)
 text = "FALCAO SAGA"
 horizontal_alignment = 1
 
-[node name="SubtitleLabel" type="Label" parent="TitleContainer"]
+[node name="SubtitleLabel" type="Label" parent="MarginContainer/VBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.9)
 text = "PSS Sleman — Collect the Legacy"
 horizontal_alignment = 1
 
-[node name="TopBar" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 380.0
-offset_right = 700.0
-offset_bottom = 440.0
-
-[node name="CoinsLabel" type="Label" parent="TopBar"]
+[node name="Spacer1" type="Control" parent="MarginContainer/VBox"]
 layout_mode = 2
+custom_minimum_size = Vector2(0, 20)
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+
+[node name="CoinsLabel" type="Label" parent="MarginContainer/VBox/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 theme_override_colors/font_color = Color(1.0, 0.843, 0.0, 1.0)
 text = "🪙 0"
 
-[node name="XPContainer" type="HBoxContainer" parent="TopBar"]
+[node name="XPLabel" type="Label" parent="MarginContainer/VBox/TopBar"]
 layout_mode = 2
-
-[node name="XPLabel" type="Label" parent="TopBar/XPContainer"]
-layout_mode = 2
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
 text = "⭐ 0"
 
-[node name="RPPLabel" type="Label" parent="TopBar/XPContainer"]
+[node name="RPPLabel" type="Label" parent="MarginContainer/VBox/TopBar"]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 theme_override_colors/font_color = Color(0.0, 0.8, 1.0, 1.0)
 text = "💎 0"
 
-[node name="LivesLabel" type="Label" parent="TopBar"]
+[node name="LivesLabel" type="Label" parent="MarginContainer/VBox/TopBar"]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 theme_override_colors/font_color = Color(1.0, 0.3, 0.3, 1.0)
 text = "❤️ 5"
 
-[node name="ButtonContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 500.0
-offset_right = 660.0
-offset_bottom = 1100.0
-theme_override_constants/separation = 15
+[node name="Spacer2" type="Control" parent="MarginContainer/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
 
-[node name="PlayButton" type="Button" parent="ButtonContainer"]
+[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="MarginContainer/VBox/ButtonContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "▶  MAIN"
-custom_minimum_size = Vector2(600, 70)
+custom_minimum_size = Vector2(0, 70)
 
-[node name="AlbumButton" type="Button" parent="ButtonContainer"]
+[node name="AlbumButton" type="Button" parent="MarginContainer/VBox/ButtonContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 22
 text = "📇  Album PSS"
-custom_minimum_size = Vector2(600, 65)
+custom_minimum_size = Vector2(0, 65)
 
-[node name="ShopButton" type="Button" parent="ButtonContainer"]
+[node name="ShopButton" type="Button" parent="MarginContainer/VBox/ButtonContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 22
 text = "🛒  Shop"
-custom_minimum_size = Vector2(600, 65)
+custom_minimum_size = Vector2(0, 65)
 
-[node name="LeaderboardButton" type="Button" parent="ButtonContainer"]
+[node name="LeaderboardButton" type="Button" parent="MarginContainer/VBox/ButtonContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 22
 text = "🏆  Leaderboard"
-custom_minimum_size = Vector2(600, 65)
+custom_minimum_size = Vector2(0, 65)
 
-[node name="SeasonInfo" type="Label" parent="."]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 1200.0
-offset_right = 700.0
-offset_bottom = 1260.0
+[node name="Spacer3" type="Control" parent="MarginContainer/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SeasonInfo" type="Label" parent="MarginContainer/VBox"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 14
 theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.6)
 text = "Season 1: Super League (2024-2026)"

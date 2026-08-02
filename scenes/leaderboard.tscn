@@ -7,63 +7,65 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_lb")
 
 [node name="Background" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 720.0
-offset_bottom = 1280.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color(0.1, 0.05, 0.05, 1.0)
 
-[node name="TitleLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 700.0
-offset_bottom = 60.0
-theme_override_font_sizes/font_size = 28
+[node name="TopBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_bottom = 56.0
+
+[node name="BackButton" type="Button" parent="TopBar"]
+layout_mode = 2
+text = "←"
+
+[node name="TitleLabel" type="Label" parent="TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
 theme_override_colors/font_color = Color(1.0, 0.843, 0.0, 1.0)
 text = "🏆 Leaderboard"
 horizontal_alignment = 1
 
-[node name="BackButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 80.0
-offset_bottom = 55.0
-text = "←"
+[node name="MainVBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 0.05
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = -4.0
 
-[node name="TabBar" type="TabBar" parent="."]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 70.0
-offset_right = 700.0
-offset_bottom = 105.0
+[node name="TabBar" type="TabBar" parent="MainVBox"]
+layout_mode = 2
 
-[node name="RankList" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 115.0
-offset_right = 700.0
-offset_bottom = 1250.0
+[node name="ScrollContainer" type="ScrollContainer" parent="MainVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RankList" type="VBoxContainer" parent="MainVBox/ScrollContainer"]
+layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="LoadingLabel" type="Label" parent="RankList"]
+[node name="LoadingLabel" type="Label" parent="MainVBox/ScrollContainer/RankList"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1.0)
 text = "Loading leaderboard..."
 horizontal_alignment = 1
 
-[node name="YourRank" type="Label" parent="."]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 1250.0
-offset_right = 700.0
-offset_bottom = 1280.0
+[node name="YourRank" type="Label" parent="MainVBox"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 14
 theme_override_colors/font_color = Color(0.0, 0.8, 1.0, 1.0)
 text = ""

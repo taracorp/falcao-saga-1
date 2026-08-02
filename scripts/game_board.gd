@@ -26,7 +26,6 @@ var _item_scenes: Dictionary = {}
 
 func _ready() -> void:
 	_initialize_grid()
-	_create_board()
 
 func _initialize_grid() -> void:
 	_grid = []
