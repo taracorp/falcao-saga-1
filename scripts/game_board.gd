@@ -106,9 +106,15 @@ func _pos_to_grid(pos: Vector2) -> Vector2i:
 func _input(event: InputEvent) -> void:
 	if _is_processing: return
 	if event is InputEventMouseButton and event.pressed:
+		# Only handle touches within the board area
+		if not _is_touch_in_board(event.position): return
 		var grid_pos = _pos_to_grid(event.position)
 		if _is_valid_cell(grid_pos):
 			_on_cell_tapped(grid_pos)
+
+func _is_touch_in_board(pos: Vector2) -> bool:
+	return pos.x >= GRID_OFFSET.x and pos.x < GRID_OFFSET.x + Config.GRID_COLS * CELL_SIZE \
+		and pos.y >= GRID_OFFSET.y and pos.y < GRID_OFFSET.y + Config.GRID_ROWS * CELL_SIZE
 
 func _is_valid_cell(pos: Vector2i) -> bool:
 	return pos.x >= 0 and pos.x < Config.GRID_COLS and pos.y >= 0 and pos.y < Config.GRID_ROWS
