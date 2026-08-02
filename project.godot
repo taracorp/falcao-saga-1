@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Falcao Saga"
+config/description="Match-3 puzzle game celebrating PSS Sleman history. Collect player cards and jerseys from every season — from the Super League era back to the legendary founding year 1976."
+run/main_scene="res://scenes/auth.tscn"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="mobile"
+
+[application/config]
+
+name="Falcao Saga"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/size/mode=2
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[autoload]
+
+Config="*res://scripts/autoload/config.gd"
+GameManager="*res://scripts/autoload/game_manager.gd"
+SupabaseClient="*res://scripts/autoload/supabase_client.gd"
+AudioManager="*res://scripts/autoload/audio_manager.gd"
+
+[input]
+
+swap_touch={ "type": "MouseButtonAction", "button": "Mouse Wheel Down Button" }
+
+[physics]
+
+common/max_physics_steps_per_frame=4
