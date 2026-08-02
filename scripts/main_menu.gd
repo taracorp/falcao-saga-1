@@ -1,10 +1,10 @@
 extends Control
 
-@onready var coins_label = $MarginContainer/VBox/TopBar/CoinsLabel
-@onready var xp_label = $MarginContainer/VBox/TopBar/XPLabel
-@onready var rpp_label = $MarginContainer/VBox/TopBar/RPPLabel
-@onready var lives_label = $MarginContainer/VBox/TopBar/LivesLabel
-@onready var season_info = $MarginContainer/VBox/SeasonInfo
+@onready var coins_label = $VBox/TopBar/CoinsLabel
+@onready var xp_label = $VBox/TopBar/XPLabel
+@onready var rpp_label = $VBox/TopBar/RPPLabel
+@onready var lives_label = $VBox/TopBar/LivesLabel
+@onready var season_info = $VBox/SeasonInfo
 
 func _ready() -> void:
 	_update_display()
@@ -16,10 +16,10 @@ func _connect_signals() -> void:
 	GameManager.rpp_changed.connect(_on_rpp_changed)
 	GameManager.lives_changed.connect(_on_lives_changed)
 
-	$MarginContainer/VBox/ButtonContainer/PlayButton.pressed.connect(_on_play_pressed)
-	$MarginContainer/VBox/ButtonContainer/AlbumButton.pressed.connect(_on_album_pressed)
-	$MarginContainer/VBox/ButtonContainer/ShopButton.pressed.connect(_on_shop_pressed)
-	$MarginContainer/VBox/ButtonContainer/LeaderboardButton.pressed.connect(_on_leaderboard_pressed)
+	$VBox/PlayButton.pressed.connect(_on_play_pressed)
+	$VBox/AlbumButton.pressed.connect(_on_album_pressed)
+	$VBox/ShopButton.pressed.connect(_on_shop_pressed)
+	$VBox/LeaderboardButton.pressed.connect(_on_leaderboard_pressed)
 
 func _update_display() -> void:
 	coins_label.text = "🪙 %d" % GameManager.coins

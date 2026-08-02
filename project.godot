@@ -30,9 +30,8 @@ name="Falcao Saga"
 window/size/viewport_width=720
 window/size/viewport_height=1280
 window/size/mode=2
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
-window/stretch/scale_mode="fractional"
 window/handheld/orientation=1
 window/handheld/use_native_borderless=true
 
