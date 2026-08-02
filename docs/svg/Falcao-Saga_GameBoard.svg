@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1280" width="720" height="1280">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <linearGradient id="cellGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="1280" fill="#015A38"/>
+
+  <!-- Top Bar -->
+  <rect x="4" y="4" width="712" height="46" rx="10" fill="#0D2B1E" opacity="0.9"/>
+  <!-- Back button -->
+  <rect x="12" y="9" width="60" height="36" rx="8" fill="#02C57A" opacity="0.3"/>
+  <text x="42" y="33" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFFFFF">← Back</text>
+  <!-- Moves -->
+  <text x="190" y="32" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">Moves: 20</text>
+  <!-- Score -->
+  <text x="360" y="32" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="18" fill="#F8FE06">Score: 0</text>
+  <!-- Target -->
+  <text x="530" y="32" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFFFFF" opacity="0.7">Goal: 1000</text>
+
+  <!-- Game Board 8×8 -->
+  <g transform="translate(40, 140)">
+    <!-- Grid background -->
+    <rect x="-4" y="-4" width="584" height="584" rx="8" fill="#0D2B1E" opacity="0.5"/>
+
+    <!-- Row 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.4"/><text x="34" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">⚽</text>
+      <rect x="73" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.3"/><text x="107" y="42" text-anchor="middle" font-size="24" fill="#015A38">🦅</text>
+      <rect x="146" y="0" width="68" height="68" rx="6" fill="#01925B" opacity="0.4"/><text x="180" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">🏟</text>
+      <rect x="219" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.4"/><text x="253" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">⚽</text>
+      <rect x="292" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.3"/><text x="326" y="42" text-anchor="middle" font-size="24" fill="#015A38">👕</text>
+      <rect x="365" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.3"/><text x="399" y="42" text-anchor="middle" font-size="24" fill="#015A38">🏆</text>
+      <rect x="438" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.3"/><text x="472" y="42" text-anchor="middle" font-size="24" fill="#015A38">🦅</text>
+      <rect x="511" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.4"/><text x="545" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">⚽</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(0, 73)">
+      <rect x="0" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.3"/><text x="34" y="42" text-anchor="middle" font-size="24" fill="#015A38">🏆</text>
+      <rect x="73" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.4"/><text x="107" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">⚽</text>
+      <rect x="146" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.3"/><text x="180" y="42" text-anchor="middle" font-size="24" fill="#015A38">👕</text>
+      <rect x="219" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.3"/><text x="253" y="42" text-anchor="middle" font-size="24" fill="#015A38">🦅</text>
+      <rect x="292" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.4"/><text x="326" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">⚽</text>
+      <rect x="365" y="0" width="68" height="68" rx="6" fill="#01925B" opacity="0.4"/><text x="399" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">🏟</text>
+      <rect x="438" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.3"/><text x="472" y="42" text-anchor="middle" font-size="24" fill="#015A38">👕</text>
+      <rect x="511" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.3"/><text x="545" y="42" text-anchor="middle" font-size="24" fill="#015A38">🏆</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(0, 146)">
+      <rect x="0" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.3"/><text x="34" y="42" text-anchor="middle" font-size="24" fill="#015A38">👕</text>
+      <rect x="73" y="0" width="68" height="68" rx="6" fill="#01925B" opacity="0.4"/><text x="107" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">🏟</text>
+      <rect x="146" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.4"/><text x="180" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">⚽</text>
+      <rect x="219" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.3"/><text x="253" y="42" text-anchor="middle" font-size="24" fill="#015A38">🏆</text>
+      <rect x="292" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.3"/><text x="326" y="42" text-anchor="middle" font-size="24" fill="#015A38">🦅</text>
+      <rect x="365" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.3"/><text x="399" y="42" text-anchor="middle" font-size="24" fill="#015A38">👕</text>
+      <rect x="438" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.4"/><text x="472" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">⚽</text>
+      <rect x="511" y="0" width="68" height="68" rx="6" fill="#01925B" opacity="0.4"/><text x="545" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">🏟</text>
+    </g>
+
+    <!-- Row 4 -->
+    <g transform="translate(0, 219)">
+      <rect x="0" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.3"/><text x="34" y="42" text-anchor="middle" font-size="24" fill="#015A38">🦅</text>
+      <rect x="73" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.3"/><text x="107" y="42" text-anchor="middle" font-size="24" fill="#015A38">👕</text>
+      <rect x="146" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.3"/><text x="180" y="42" text-anchor="middle" font-size="24" fill="#015A38">🏆</text>
+      <rect x="219" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.4"/><text x="253" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">⚽</text>
+      <rect x="292" y="0" width="68" height="68" rx="6" fill="#01925B" opacity="0.4"/><text x="326" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">🏟</text>
+      <rect x="365" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.4"/><text x="399" y="42" text-anchor="middle" font-size="24" fill="#FFFFFF">⚽</text>
+      <rect x="438" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.3"/><text x="472" y="42" text-anchor="middle" font-size="24" fill="#015A38">🏆</text>
+      <rect x="511" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.3"/><text x="545" y="42" text-anchor="middle" font-size="24" fill="#015A38">👕</text>
+    </g>
+
+    <!-- Row 5-8 simplified (repeating pattern) -->
+    <g transform="translate(0, 292)" opacity="0.7">
+      <rect x="0" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.3"/><text x="34" y="42" text-anchor="middle" font-size="22">⚽</text>
+      <rect x="73" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="107" y="42" text-anchor="middle" font-size="22">🏆</text>
+      <rect x="146" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="180" y="42" text-anchor="middle" font-size="22">🦅</text>
+      <rect x="219" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.2"/><text x="253" y="42" text-anchor="middle" font-size="22">👕</text>
+      <rect x="292" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.3"/><text x="326" y="42" text-anchor="middle" font-size="22">⚽</text>
+      <rect x="365" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="399" y="42" text-anchor="middle" font-size="22">🦅</text>
+      <rect x="438" y="0" width="68" height="68" rx="6" fill="#01925B" opacity="0.3"/><text x="472" y="42" text-anchor="middle" font-size="22">🏟</text>
+      <rect x="511" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.3"/><text x="545" y="42" text-anchor="middle" font-size="22">⚽</text>
+    </g>
+    <g transform="translate(0, 365)" opacity="0.6">
+      <rect x="0" y="0" width="68" height="68" rx="6" fill="#01925B" opacity="0.3"/><text x="34" y="42" text-anchor="middle" font-size="22">🏟</text>
+      <rect x="73" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.3"/><text x="107" y="42" text-anchor="middle" font-size="22">⚽</text>
+      <rect x="146" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.2"/><text x="180" y="42" text-anchor="middle" font-size="22">👕</text>
+      <rect x="219" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="253" y="42" text-anchor="middle" font-size="22">🏆</text>
+      <rect x="292" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="326" y="42" text-anchor="middle" font-size="22">🦅</text>
+      <rect x="365" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.2"/><text x="399" y="42" text-anchor="middle" font-size="22">👕</text>
+      <rect x="438" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.3"/><text x="472" y="42" text-anchor="middle" font-size="22">⚽</text>
+      <rect x="511" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="545" y="42" text-anchor="middle" font-size="22">🏆</text>
+    </g>
+    <g transform="translate(0, 438)" opacity="0.5">
+      <rect x="0" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.2"/><text x="34" y="42" text-anchor="middle" font-size="22">👕</text>
+      <rect x="73" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="107" y="42" text-anchor="middle" font-size="22">🦅</text>
+      <rect x="146" y="0" width="68" height="68" rx="6" fill="#01925B" opacity="0.3"/><text x="180" y="42" text-anchor="middle" font-size="22">🏟</text>
+      <rect x="219" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.3"/><text x="253" y="42" text-anchor="middle" font-size="22">⚽</text>
+      <rect x="292" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="326" y="42" text-anchor="middle" font-size="22">🏆</text>
+      <rect x="365" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.3"/><text x="399" y="42" text-anchor="middle" font-size="22">⚽</text>
+      <rect x="438" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="472" y="42" text-anchor="middle" font-size="22">🦅</text>
+      <rect x="511" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.2"/><text x="545" y="42" text-anchor="middle" font-size="22">👕</text>
+    </g>
+    <g transform="translate(0, 511)" opacity="0.4">
+      <rect x="0" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.3"/><text x="34" y="42" text-anchor="middle" font-size="22">⚽</text>
+      <rect x="73" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="107" y="42" text-anchor="middle" font-size="22">🏆</text>
+      <rect x="146" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.3"/><text x="180" y="42" text-anchor="middle" font-size="22">⚽</text>
+      <rect x="219" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="253" y="42" text-anchor="middle" font-size="22">🦅</text>
+      <rect x="292" y="0" width="68" height="68" rx="6" fill="#FFFFFF" opacity="0.2"/><text x="326" y="42" text-anchor="middle" font-size="22">👕</text>
+      <rect x="365" y="0" width="68" height="68" rx="6" fill="#01925B" opacity="0.3"/><text x="399" y="42" text-anchor="middle" font-size="22">🏟</text>
+      <rect x="438" y="0" width="68" height="68" rx="6" fill="#F8FE06" opacity="0.2"/><text x="472" y="42" text-anchor="middle" font-size="22">🏆</text>
+      <rect x="511" y="0" width="68" height="68" rx="6" fill="#02C57A" opacity="0.3"/><text x="545" y="42" text-anchor="middle" font-size="22">⚽</text>
+    </g>
+
+    <!-- Combo popup (Tendangan Falcao!) -->
+    <g transform="translate(0, 260)" opacity="0.9">
+      <rect x="100" y="0" width="380" height="44" rx="10" fill="#F8FE06" opacity="0.15"/>
+      <text x="290" y="30" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="24" fill="#F8FE06">🔥 Tendangan Falcao!</text>
+    </g>
+  </g>
+
+  <!-- Bottom Bar: Power-ups -->
+  <g transform="translate(4, 1230)">
+    <rect x="0" y="0" width="712" height="46" rx="10" fill="#0D2B1E" opacity="0.9"/>
+    <rect x="8" y="4" width="228" height="38" rx="8" fill="#02C57A" opacity="0.25"/>
+    <text x="122" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFFFFF">🔨  150</text>
+
+    <rect x="244" y="4" width="228" height="38" rx="8" fill="#F8FE06" opacity="0.15"/>
+    <text x="358" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#F8FE06">💣  300</text>
+
+    <rect x="480" y="4" width="228" height="38" rx="8" fill="#02C57A" opacity="0.25"/>
+    <text x="594" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFFFFF">+5 ✨ 200</text>
+  </g>
+</svg>

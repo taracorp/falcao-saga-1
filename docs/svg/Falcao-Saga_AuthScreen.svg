@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1280" width="720" height="1280">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#02C57A"/>
+      <stop offset="100%" stop-color="#015A38"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="1280" fill="url(#bgGrad)"/>
+
+  <!-- PSS Logo silhouette (eagle) -->
+  <circle cx="360" cy="280" r="80" fill="none" stroke="#F8FE06" stroke-width="3" opacity="0.3"/>
+  <text x="360" y="290" text-anchor="middle" font-size="60" fill="#F8FE06" opacity="0.2">🦅</text>
+
+  <!-- Card container -->
+  <rect x="60" y="380" width="600" height="520" rx="16" fill="#0D2B1E" opacity="0.9" filter="url(#shadow)"/>
+
+  <!-- Title -->
+  <text x="360" y="440" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="38" fill="#F8FE06" filter="url(#glow)">FALCAO SAGA</text>
+
+  <!-- Subtitle -->
+  <text x="360" y="470" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#FFFFFF" opacity="0.7">PSS Sleman</text>
+
+  <!-- Separator line -->
+  <line x1="120" y1="495" x2="600" y2="495" stroke="#02C57A" stroke-width="1" opacity="0.4"/>
+
+  <!-- Email input -->
+  <rect x="110" y="520" width="500" height="50" rx="8" fill="#1A3A2A" stroke="#02C57A" stroke-width="1.5"/>
+  <text x="125" y="550" font-family="sans-serif" font-size="16" fill="#FFFFFF" opacity="0.4">Email</text>
+
+  <!-- Password input -->
+  <rect x="110" y="585" width="500" height="50" rx="8" fill="#1A3A2A" stroke="#02C57A" stroke-width="1.5"/>
+  <text x="125" y="615" font-family="sans-serif" font-size="16" fill="#FFFFFF" opacity="0.4">Password</text>
+  <circle cx="115" cy="610" r="4" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="130" cy="610" r="4" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="145" cy="610" r="4" fill="#FFFFFF" opacity="0.3"/>
+
+  <!-- Error text placeholder -->
+  <text x="360" y="670" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FF4D4D" opacity="0">Error message appears here</text>
+
+  <!-- Sign In button -->
+  <rect x="110" y="700" width="500" height="55" rx="12" fill="#F8FE06" filter="url(#shadow)"/>
+  <text x="360" y="735" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="20" fill="#015A38">Sign In</text>
+
+  <!-- Or divider -->
+  <line x1="160" y1="785" x2="300" y2="785" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/>
+  <text x="360" y="790" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF" opacity="0.4">or</text>
+  <line x1="420" y1="785" x2="560" y2="785" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Play Offline button -->
+  <rect x="110" y="810" width="500" height="45" rx="12" fill="none" stroke="#F8FE06" stroke-width="2"/>
+  <text x="360" y="840" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#F8FE06">Play Offline</text>
+
+  <!-- Footer -->
+  <text x="360" y="920" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF" opacity="0.3">v1.0 — Collect the Legacy</text>
+
+  <!-- Falcao eagle at bottom -->
+  <text x="360" y="1050" text-anchor="middle" font-size="120" fill="#F8FE06" opacity="0.08">🦅</text>
+
+  <!-- Loading overlay (shown during auth) -->
+  <rect x="0" y="0" width="720" height="1280" fill="#000000" opacity="0" rx="0">
+    <animate attributeName="opacity" values="0;0.6;0.6;0" dur="2s" repeatCount="indefinite" begin="5s"/>
+  </rect>
+  <text x="360" y="640" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#FFFFFF" opacity="0">
+    Signing in...
+    <animate attributeName="opacity" values="0;1;1;0" dur="2s" repeatCount="indefinite" begin="5s"/>
+  </text>
+</svg>
