@@ -9,81 +9,82 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource("1_auth")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="BG" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color(0.008, 0.773, 0.478, 1.0)
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="Center" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="VBox" type="VBoxContainer" parent="CenterContainer"]
+[node name="VBox" type="VBoxContainer" parent="Center"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="TitleLabel" type="Label" parent="CenterContainer/VBox"]
+[node name="Title" type="Label" parent="Center/VBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
-theme_override_colors/font_color = Color(0.973, 0.996, 0.024, 1.0)
 text = "FALCAO SAGA"
 horizontal_alignment = 1
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.973, 0.996, 0.024, 1.0)
 
-[node name="SubtitleLabel" type="Label" parent="CenterContainer/VBox"]
+[node name="Subtitle" type="Label" parent="Center/VBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 16
-theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.7)
 text = "Sign in to save your progress"
 horizontal_alignment = 1
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.7)
 
-[node name="UsernameInput" type="LineEdit" parent="CenterContainer/VBox"]
+[node name="Username" type="LineEdit" parent="Center/VBox"]
 layout_mode = 2
 placeholder_text = "Username"
-theme_override_font_sizes/font_size = 18
 custom_minimum_size = Vector2(300, 50)
+theme_override_font_sizes/font_size = 18
 
-[node name="EmailInput" type="LineEdit" parent="CenterContainer/VBox"]
+[node name="Email" type="LineEdit" parent="Center/VBox"]
 layout_mode = 2
 placeholder_text = "Email"
-theme_override_font_sizes/font_size = 18
 custom_minimum_size = Vector2(300, 50)
+theme_override_font_sizes/font_size = 18
 
-[node name="PasswordInput" type="LineEdit" parent="CenterContainer/VBox"]
+[node name="Password" type="LineEdit" parent="Center/VBox"]
 layout_mode = 2
 placeholder_text = "Password"
 secret = true
-theme_override_font_sizes/font_size = 18
 custom_minimum_size = Vector2(300, 50)
+theme_override_font_sizes/font_size = 18
 
-[node name="ErrorLabel" type="Label" parent="CenterContainer/VBox"]
+[node name="Error" type="Label" parent="Center/VBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
-theme_override_colors/font_color = Color(1.0, 0.3, 0.3, 1.0)
 text = ""
 horizontal_alignment = 1
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1.0, 0.3, 0.3, 1.0)
 
-[node name="SignInButton" type="Button" parent="CenterContainer/VBox"]
+[node name="BtnSignIn" type="Button" parent="Center/VBox"]
 layout_mode = 2
 text = "Sign In"
+custom_minimum_size = Vector2(300, 50)
 theme_override_font_sizes/font_size = 20
-custom_minimum_size = Vector2(300, 55)
 
-[node name="SignUpButton" type="Button" parent="CenterContainer/VBox"]
+[node name="BtnSignUp" type="Button" parent="Center/VBox"]
 layout_mode = 2
 text = "Create Account"
+custom_minimum_size = Vector2(300, 50)
 theme_override_font_sizes/font_size = 20
-custom_minimum_size = Vector2(300, 55)
 
-[node name="SkipButton" type="Button" parent="CenterContainer/VBox"]
+[node name="BtnSkip" type="Button" parent="Center/VBox"]
 layout_mode = 2
 text = "Play Offline"
+custom_minimum_size = Vector2(300, 40)
 theme_override_font_sizes/font_size = 16
 
-[node name="LoadingIndicator" type="ColorRect" parent="."]
+[node name="LoadingOverlay" type="ColorRect" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -91,7 +92,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color(0.0, 0.0, 0.0, 0.6)
 
-[node name="LoadingLabel" type="Label" parent="LoadingIndicator"]
+[node name="LoadingText" type="Label" parent="LoadingOverlay"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
