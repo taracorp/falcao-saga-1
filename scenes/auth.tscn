@@ -24,27 +24,21 @@ anchor_bottom = 1.0
 
 [node name="VBox" type="VBoxContainer" parent="Center"]
 layout_mode = 2
-theme_override_constants/separation = 12
+theme_override_constants/separation = 16
 
 [node name="Title" type="Label" parent="Center/VBox"]
 layout_mode = 2
 text = "FALCAO SAGA"
 horizontal_alignment = 1
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 38
 theme_override_colors/font_color = Color(0.973, 0.996, 0.024, 1.0)
 
 [node name="Subtitle" type="Label" parent="Center/VBox"]
 layout_mode = 2
-text = "Sign in to save your progress"
+text = "PSS Sleman"
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 16
 theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.7)
-
-[node name="Username" type="LineEdit" parent="Center/VBox"]
-layout_mode = 2
-placeholder_text = "Username"
-custom_minimum_size = Vector2(300, 50)
-theme_override_font_sizes/font_size = 18
 
 [node name="Email" type="LineEdit" parent="Center/VBox"]
 layout_mode = 2
@@ -69,19 +63,13 @@ theme_override_colors/font_color = Color(1.0, 0.3, 0.3, 1.0)
 [node name="BtnSignIn" type="Button" parent="Center/VBox"]
 layout_mode = 2
 text = "Sign In"
-custom_minimum_size = Vector2(300, 50)
-theme_override_font_sizes/font_size = 20
-
-[node name="BtnSignUp" type="Button" parent="Center/VBox"]
-layout_mode = 2
-text = "Create Account"
-custom_minimum_size = Vector2(300, 50)
-theme_override_font_sizes/font_size = 20
+custom_minimum_size = Vector2(300, 55)
+theme_override_font_sizes/font_size = 22
 
 [node name="BtnSkip" type="Button" parent="Center/VBox"]
 layout_mode = 2
 text = "Play Offline"
-custom_minimum_size = Vector2(300, 40)
+custom_minimum_size = Vector2(300, 45)
 theme_override_font_sizes/font_size = 16
 
 [node name="LoadingOverlay" type="ColorRect" parent="."]
@@ -103,7 +91,7 @@ offset_left = -80.0
 offset_top = -20.0
 offset_right = 80.0
 offset_bottom = 20.0
-text = "Connecting..."
+text = "Signing in..."
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 22
 theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)

@@ -4,7 +4,7 @@
 
 ---
 
-## Halaman 1: Auth Screen
+## Halaman 1: Auth Screen (Simplified)
 
 ```
 ┌──────────────────────────────────────┐
@@ -13,33 +13,30 @@
 │ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
 │                                      │
 │         ┌─────────────────┐           │
-│         │  FALCAO SAGA    │           │  ← Gold #F8FE06, 36pt
+│         │  FALCAO SAGA    │           │  ← Gold #F8FE06, 38pt
 │         │                 │           │
-│         │ Sign in to save │           │  ← White 70%, 16pt
-│         │  your progress  │           │
+│         │   PSS Sleman    │           │  ← White 70%, 16pt
 │         ├─────────────────┤           │
-│         │   Username      │           │  ← LineEdit, 300×50
-│         ├─────────────────┤           │
-│         │   Email         │           │  ← LineEdit
-│         ├─────────────────┤           │
-│         │   Password      │           │  ← LineEdit, secret
-│         ├─────────────────┤           │
-│         │ (error message) │           │  ← Red label, hidden
-│         ├─────────────────┤           │
+│         │                 │           │
+│         │   ┌─────────┐   │           │
+│         │   │  Email  │   │           │  ← LineEdit 300×50
+│         │   └─────────┘   │           │
+│         │   ┌─────────┐   │           │
+│         │   │Password │   │           │  ← LineEdit secret
+│         │   └─────────┘   │           │
+│         │                 │           │
+│         │  (error msg)    │           │  ← Red, auto-fade 3s
+│         │                 │           │
 │         │  ┌───────────┐  │           │
-│         │  │  Sign In  │  │           │  ← Button 300×50
+│         │  │  Sign In  │  │           │  ← Button 300×55
 │         │  └───────────┘  │           │
-│         │  ┌───────────┐  │           │
-│         │  │  Create   │  │           │  ← Button 300×50
-│         │  │  Account  │  │           │
-│         │  └───────────┘  │           │
-│         │  ┌───────────┐  │           │
-│         │  │Play Offline│  │           │  ← Button 300×40
-│         │  └───────────┘  │           │
+│         │                 │           │
+│         │   Play Offline  │           │  ← Button 300×45
+│         │                 │           │
 │         └─────────────────┘           │
 │                                      │
-│  [Loading overlay: black 60% +       │
-│   "Connecting..." centered]          │
+│  [Loading: "Signing in..." di atas    │
+│   overlay hitam 60% saat login]      │
 └──────────────────────────────────────┘
          720 × 1280 (portrait)
 ```
