@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/auth_screen.gd" id="1_auth"]
 
-[node name="AuthScreen" type="Node2D"]
+[node name="AuthScreenRoot" type="Node2D"]
 script = ExtResource("1_auth")
 
 [node name="Canvas" type="CanvasLayer" parent="."]
@@ -18,12 +18,20 @@ offset_right = 720.0
 offset_bottom = 1280.0
 color = Color(0.008, 0.773, 0.478, 1.0)
 
+[node name="CardBG" type="ColorRect" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 200.0
+offset_right = 680.0
+offset_bottom = 680.0
+color = Color(0.988, 0.953, 0.898, 1.0)
+
 [node name="Title" type="Label" parent="Canvas/UI"]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 200.0
-offset_right = 660.0
-offset_bottom = 250.0
+offset_left = 40.0
+offset_top = 240.0
+offset_right = 680.0
+offset_bottom = 300.0
 text = "FALCAO SAGA"
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 38
@@ -31,62 +39,81 @@ theme_override_colors/font_color = Color(0.973, 0.996, 0.024, 1.0)
 
 [node name="Subtitle" type="Label" parent="Canvas/UI"]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 250.0
-offset_right = 660.0
-offset_bottom = 280.0
-text = "PSS Sleman"
+offset_left = 40.0
+offset_top = 300.0
+offset_right = 680.0
+offset_bottom = 330.0
+text = "PSS Sleman  •  Collect the Legacy"
 horizontal_alignment = 1
-theme_override_font_sizes/font_size = 16
-theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.7)
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.45, 0.1, 0.02, 1.0)
+
+[node name="Separator" type="ColorRect" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 360.0
+offset_right = 620.0
+offset_bottom = 362.0
+color = Color(0.008, 0.773, 0.478, 0.4)
 
 [node name="Email" type="LineEdit" parent="Canvas/UI"]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 350.0
-offset_right = 610.0
-offset_bottom = 400.0
-placeholder_text = "Email"
+offset_left = 80.0
+offset_top = 400.0
+offset_right = 640.0
+offset_bottom = 450.0
+placeholder_text = "Email Address"
 theme_override_font_sizes/font_size = 18
 
 [node name="Password" type="LineEdit" parent="Canvas/UI"]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 420.0
-offset_right = 610.0
-offset_bottom = 470.0
+offset_left = 80.0
+offset_top = 470.0
+offset_right = 640.0
+offset_bottom = 520.0
 placeholder_text = "Password"
 secret = true
 theme_override_font_sizes/font_size = 18
 
 [node name="Error" type="Label" parent="Canvas/UI"]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 475.0
-offset_right = 610.0
-offset_bottom = 495.0
+offset_left = 80.0
+offset_top = 525.0
+offset_right = 640.0
+offset_bottom = 545.0
 text = ""
 horizontal_alignment = 1
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 13
 theme_override_colors/font_color = Color(1.0, 0.3, 0.3, 1.0)
 
 [node name="BtnSignIn" type="Button" parent="Canvas/UI"]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 520.0
-offset_right = 610.0
-offset_bottom = 575.0
-text = "Sign In"
-theme_override_font_sizes/font_size = 22
+offset_left = 80.0
+offset_top = 565.0
+offset_right = 640.0
+offset_bottom = 620.0
+text = "SIGN IN"
+theme_override_font_sizes/font_size = 20
 
 [node name="BtnSkip" type="Button" parent="Canvas/UI"]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 600.0
-offset_right = 610.0
-offset_bottom = 645.0
+offset_left = 80.0
+offset_top = 635.0
+offset_right = 640.0
+offset_bottom = 670.0
 text = "Play Offline"
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 15
+
+[node name="FooterLabel" type="Label" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 1240.0
+offset_right = 680.0
+offset_bottom = 1270.0
+text = "v1.0  •  PSS Sleman"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.3)
 
 [node name="LoadingOverlay" type="ColorRect" parent="Canvas/UI"]
 visible = false
