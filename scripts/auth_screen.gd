@@ -9,8 +9,6 @@ func _ready() -> void:
 	$BtnSkip.pressed.connect(_on_skip)
 	SupabaseClient.auth_success.connect(_on_auth_success)
 	SupabaseClient.auth_error.connect(_on_auth_error)
-	if GameManager.username != "":
-		get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func _on_sign_in() -> void:
 	var email = email_input.text.strip_edges()

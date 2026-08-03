@@ -41,7 +41,7 @@ func _on_combo(combo: String) -> void:
 	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	l.position = Vector2(160, 500)
 	l.size = Vector2(400, 50)
-	$Canvas/UI.add_child(l)
+	add_child(l)
 	var t = create_tween().set_parallel(true)
 	t.tween_property(l, "position:y", 440, 0.6)
 	t.tween_property(l, "modulate:a", 0.0, 0.6)
@@ -53,5 +53,5 @@ func _on_level_complete(stars: int) -> void:
 	p.title = "Level Complete!"
 	p.dialog_text = "%s\nScore: %d" % ["⭐".repeat(stars), board._score]
 	p.confirmed.connect(func(): get_tree().change_scene_to_file("res://scenes/main.tscn"))
-	$Canvas/UI.add_child(p)
+	add_child(p)
 	p.popup_centered()
