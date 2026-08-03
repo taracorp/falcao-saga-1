@@ -1,10 +1,10 @@
-extends Control
+extends Node2D
 
-@onready var coins_label = $VBox/TopBar/Coins
-@onready var xp_label = $VBox/TopBar/XP
-@onready var rpp_label = $VBox/TopBar/RPP
-@onready var lives_label = $VBox/TopBar/Lives
-@onready var season_info = $VBox/Season
+@onready var coins_label = $Canvas/UI/Coins
+@onready var xp_label = $Canvas/UI/XP
+@onready var rpp_label = $Canvas/UI/RPP
+@onready var lives_label = $Canvas/UI/Lives
+@onready var season_info = $Canvas/UI/Season
 
 func _ready() -> void:
 	_update_display()
@@ -12,11 +12,10 @@ func _ready() -> void:
 	GameManager.xp_changed.connect(func(v): xp_label.text = "⭐ %d" % v)
 	GameManager.rpp_changed.connect(func(v): rpp_label.text = "💎 %d" % v)
 	GameManager.lives_changed.connect(func(v): lives_label.text = "❤️ %d" % v)
-
-	$VBox/BtnPlay.pressed.connect(_on_play)
-	$VBox/BtnAlbum.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/album.tscn"))
-	$VBox/BtnShop.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/shop.tscn"))
-	$VBox/BtnLeaderboard.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/leaderboard.tscn"))
+	$Canvas/UI/BtnPlay.pressed.connect(_on_play)
+	$Canvas/UI/BtnAlbum.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/album.tscn"))
+	$Canvas/UI/BtnShop.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/shop.tscn"))
+	$Canvas/UI/BtnLeaderboard.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/leaderboard.tscn"))
 
 func _update_display() -> void:
 	coins_label.text = "🪙 %d" % GameManager.coins

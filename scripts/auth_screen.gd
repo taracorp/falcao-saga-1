@@ -1,12 +1,12 @@
-extends Control
+extends Node2D
 
-@onready var email_input = $Center/VBox/Email
-@onready var password_input = $Center/VBox/Password
-@onready var error_label = $Center/VBox/Error
+@onready var email_input = $Canvas/UI/Email
+@onready var password_input = $Canvas/UI/Password
+@onready var error_label = $Canvas/UI/Error
 
 func _ready() -> void:
-	$Center/VBox/BtnSignIn.pressed.connect(_on_sign_in)
-	$Center/VBox/BtnSkip.pressed.connect(_on_skip)
+	$Canvas/UI/BtnSignIn.pressed.connect(_on_sign_in)
+	$Canvas/UI/BtnSkip.pressed.connect(_on_skip)
 	SupabaseClient.auth_success.connect(_on_auth_success)
 	SupabaseClient.auth_error.connect(_on_auth_error)
 	if GameManager.username != "":
@@ -17,7 +17,7 @@ func _on_sign_in() -> void:
 	var password = password_input.text
 	if email == "" or password == "":
 		_show_error("Email and password required"); return
-	$LoadingOverlay.visible = true
+	$Canvas/UI/LoadingOverlay.visible = true
 	SupabaseClient.sign_in(email, password)
 
 func _on_skip() -> void:
@@ -25,14 +25,14 @@ func _on_skip() -> void:
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func _on_auth_success(user_data: Dictionary) -> void:
-	$LoadingOverlay.visible = false
+	$Canvas/UI/LoadingOverlay.visible = false
 	GameManager.username = user_data.get("user_metadata", {}).get("username", user_data.get("email", "Player"))
 	GameManager.save_local_data()
 	SupabaseClient.create_profile(GameManager.username)
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func _on_auth_error(msg: String) -> void:
-	$LoadingOverlay.visible = false
+	$Canvas/UI/LoadingOverlay.visible = false
 	_show_error(msg)
 
 func _show_error(msg: String) -> void:

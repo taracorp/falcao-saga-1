@@ -1,0 +1,32 @@
+[gd_scene format=3]
+
+[node name="Test" type="Node2D"]
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="Canvas"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+
+[node name="BG" type="ColorRect" parent="Canvas/UI"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(1, 0, 0, 1)
+
+[node name="Label1" type="Label" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 300.0
+offset_right = 620.0
+offset_bottom = 400.0
+text = "HELLO WORLD TEST 123 ABC"
+
+[node name="Label2" type="Label" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 500.0
+offset_right = 620.0
+offset_bottom = 600.0
+text = "BOTTOM LABEL"

@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3]
+
+[resource]
+default_font = ExtResource("1_font")
+Button/fonts/font = ExtResource("1_font")
+Label/fonts/font = ExtResource("1_font")
+LineEdit/fonts/font = ExtResource("1_font")
+Button/font_sizes/font_size = 18
+Label/font_sizes/font_size = 16
+LineEdit/font_sizes/font_size = 16

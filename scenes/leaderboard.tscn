@@ -2,18 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/leaderboard.gd" id="1_lb"]
 
-[node name="Leaderboard" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource("1_lb")
+[node name="Leaderboard" type="Control" parent="Canvas"Leaderboard
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
 color = Color(0.004, 0.353, 0.220, 1.0)
 
 [node name="TopBar" type="HBoxContainer" parent="."]
@@ -21,7 +13,6 @@ layout_mode = 1
 anchors_preset = 2
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 1.0
 anchor_bottom = 0.0
 offset_bottom = 56.0
 
@@ -42,8 +33,6 @@ horizontal_alignment = 1
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 0.05
-anchor_right = 1.0
-anchor_bottom = 1.0
 offset_left = 4.0
 offset_right = -4.0
 

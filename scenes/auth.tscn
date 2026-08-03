@@ -1,99 +1,106 @@
-[gd_scene load_steps=3 format=3 uid="uid://auth001"]
+[gd_scene load_steps=2 format=3 uid="uid://auth001"]
 
 [ext_resource type="Script" path="res://scripts/auth_screen.gd" id="1_auth"]
-[ext_resource type="Texture2D" path="res://assets/backgrounds/auth_bg.png" id="2_bg"]
 
-[node name="AuthScreen" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="AuthScreen" type="Node2D"]
 script = ExtResource("1_auth")
 
-[node name="BG" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource("2_bg")
-expand_mode = 1
-stretch_mode = 0
+[node name="Canvas" type="CanvasLayer" parent="."]
 
-[node name="Center" type="CenterContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="UI" type="Control" parent="Canvas"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
 
-[node name="VBox" type="VBoxContainer" parent="Center"]
-layout_mode = 2
-theme_override_constants/separation = 16
+[node name="BG" type="ColorRect" parent="Canvas/UI"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.008, 0.773, 0.478, 1.0)
 
-[node name="Title" type="Label" parent="Center/VBox"]
-layout_mode = 2
+[node name="Title" type="Label" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 200.0
+offset_right = 660.0
+offset_bottom = 250.0
 text = "FALCAO SAGA"
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 38
 theme_override_colors/font_color = Color(0.973, 0.996, 0.024, 1.0)
 
-[node name="Subtitle" type="Label" parent="Center/VBox"]
-layout_mode = 2
+[node name="Subtitle" type="Label" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 250.0
+offset_right = 660.0
+offset_bottom = 280.0
 text = "PSS Sleman"
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 16
 theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.7)
 
-[node name="Email" type="LineEdit" parent="Center/VBox"]
-layout_mode = 2
+[node name="Email" type="LineEdit" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 350.0
+offset_right = 610.0
+offset_bottom = 400.0
 placeholder_text = "Email"
-custom_minimum_size = Vector2(300, 50)
 theme_override_font_sizes/font_size = 18
 
-[node name="Password" type="LineEdit" parent="Center/VBox"]
-layout_mode = 2
+[node name="Password" type="LineEdit" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 420.0
+offset_right = 610.0
+offset_bottom = 470.0
 placeholder_text = "Password"
 secret = true
-custom_minimum_size = Vector2(300, 50)
 theme_override_font_sizes/font_size = 18
 
-[node name="Error" type="Label" parent="Center/VBox"]
-layout_mode = 2
+[node name="Error" type="Label" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 475.0
+offset_right = 610.0
+offset_bottom = 495.0
 text = ""
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 14
 theme_override_colors/font_color = Color(1.0, 0.3, 0.3, 1.0)
 
-[node name="BtnSignIn" type="Button" parent="Center/VBox"]
-layout_mode = 2
+[node name="BtnSignIn" type="Button" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 520.0
+offset_right = 610.0
+offset_bottom = 575.0
 text = "Sign In"
-custom_minimum_size = Vector2(300, 55)
 theme_override_font_sizes/font_size = 22
 
-[node name="BtnSkip" type="Button" parent="Center/VBox"]
-layout_mode = 2
+[node name="BtnSkip" type="Button" parent="Canvas/UI"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 600.0
+offset_right = 610.0
+offset_bottom = 645.0
 text = "Play Offline"
-custom_minimum_size = Vector2(300, 45)
 theme_override_font_sizes/font_size = 16
 
-[node name="LoadingOverlay" type="ColorRect" parent="."]
+[node name="LoadingOverlay" type="ColorRect" parent="Canvas/UI"]
 visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
 color = Color(0.0, 0.0, 0.0, 0.6)
 
-[node name="LoadingText" type="Label" parent="LoadingOverlay"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -80.0
-offset_top = -20.0
-offset_right = 80.0
-offset_bottom = 20.0
+[node name="LoadingText" type="Label" parent="Canvas/UI/LoadingOverlay"]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 620.0
+offset_right = 460.0
+offset_bottom = 660.0
 text = "Signing in..."
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 22
