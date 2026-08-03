@@ -49,8 +49,9 @@ func _get_random_item() -> int:
 	return randi() % 5  # 0-4 (BALL, EAGLE, STADIUM, JERSEY, TROPHY), STAR is special
 
 func _create_cell_item(row: int, col: int, item_type: int) -> void:
-	if _cells[row][col]:
-		_cells[row][col].queue_free()
+	var old = _cells[row][col]
+	if old != null and is_instance_valid(old):
+		old.queue_free.call_deferred()
 
 	var cell = _make_item_sprite(item_type)
 	var pos = _grid_to_pos(row, col)
