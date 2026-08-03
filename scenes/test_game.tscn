@@ -18,40 +18,46 @@ color = Color(0.004, 0.353, 0.220, 1.0)
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 68.0
-offset_bottom = 44.0
-text = "← Back"
+offset_right = 80.0
+offset_bottom = 52.0
+text = "←"
 
 [node name="Moves" type="Label" parent="."]
 layout_mode = 0
-offset_left = 80.0
-offset_top = 12.0
-offset_right = 240.0
-offset_bottom = 44.0
+offset_left = 100.0
+offset_top = 8.0
+offset_right = 350.0
+offset_bottom = 52.0
 text = "Moves: 20"
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 28
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 
 [node name="Score" type="Label" parent="."]
 layout_mode = 0
-offset_left = 400.0
-offset_top = 12.0
-offset_right = 600.0
-offset_bottom = 44.0
+offset_left = 370.0
+offset_top = 8.0
+offset_right = 620.0
+offset_bottom = 52.0
 text = "Score: 0"
 horizontal_alignment = 2
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 28
 theme_override_colors/font_color = Color(0.973, 0.996, 0.024, 1)
 
 [node name="Goal" type="Label" parent="."]
 layout_mode = 0
-offset_left = 610.0
-offset_top = 15.0
-offset_right = 710.0
-offset_bottom = 38.0
-text = "Goal:1K"
-theme_override_font_sizes/font_size = 14
+offset_left = 630.0
+offset_top = 14.0
+offset_right = 715.0
+offset_bottom = 46.0
+text = "1K"
+theme_override_font_sizes/font_size = 20
 theme_override_colors/font_color = Color(1, 1, 1, 0.7)
+
+[node name="GridLayer" type="Control" parent="."]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+mouse_filter = 2
 
 [node name="BtnHammer" type="Button" parent="."]
 layout_mode = 0
@@ -60,6 +66,7 @@ offset_top = 1232.0
 offset_right = 238.0
 offset_bottom = 1276.0
 text = "🔨 150"
+theme_override_font_sizes/font_size = 18
 
 [node name="BtnBomb" type="Button" parent="."]
 layout_mode = 0
@@ -68,6 +75,7 @@ offset_top = 1232.0
 offset_right = 476.0
 offset_bottom = 1276.0
 text = "💣 300"
+theme_override_font_sizes/font_size = 18
 
 [node name="BtnMoves" type="Button" parent="."]
 layout_mode = 0
@@ -76,9 +84,4 @@ offset_top = 1232.0
 offset_right = 716.0
 offset_bottom = 1276.0
 text = "+5 ✨ 200"
-
-[node name="GridLayer" type="Control" parent="."]
-layout_mode = 0
-offset_right = 720.0
-offset_bottom = 1280.0
-mouse_filter = 2
+theme_override_font_sizes/font_size = 18
