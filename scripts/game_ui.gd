@@ -1,14 +1,14 @@
-extends Node2D
+extends Control
 
-@onready var moves_label = $UI/TopBar/Moves
-@onready var score_label = $UI/TopBar/Score
-@onready var board = $UI/Board
+@onready var moves_label = $TopBar/Moves
+@onready var score_label = $TopBar/Score
+@onready var board = $Board
 
 func _ready() -> void:
-	$UI/TopBar/BtnBack.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/main.tscn"))
-	$UI/BottomBar/BtnHammer.pressed.connect(func(): _buy("hammer"))
-	$UI/BottomBar/BtnBomb.pressed.connect(func(): _buy("bomb"))
-	$UI/BottomBar/BtnMoves.pressed.connect(func(): _buy("moves"))
+	$TopBar/BtnBack.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/main.tscn"))
+	$BottomBar/BtnHammer.pressed.connect(func(): _buy("hammer"))
+	$BottomBar/BtnBomb.pressed.connect(func(): _buy("bomb"))
+	$BottomBar/BtnMoves.pressed.connect(func(): _buy("moves"))
 	board.score_changed.connect(func(s): score_label.text = "Score: %d" % s)
 	board.moves_changed.connect(func(m):
 		moves_label.text = "Moves: %d" % m
