@@ -17,8 +17,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource("3_bg")
-expand_mode = 1
-stretch_mode = 1
+expand_mode = 2
+stretch_mode = 6
 
 [node name="TopBar" type="HBoxContainer" parent="."]
 layout_mode = 1
