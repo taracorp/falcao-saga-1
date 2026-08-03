@@ -5,20 +5,19 @@
 [node name="MainMenuRoot" type="Node2D"]
 script = ExtResource("1_main")
 
-[node name="Canvas" type="CanvasLayer" parent="."]
 
 [node name="UI" type="Control" parent="Canvas"]
 layout_mode = 0
 offset_right = 720.0
 offset_bottom = 1280.0
 
-[node name="BG" type="ColorRect" parent="Canvas/UI"]
+[node name="BG" type="ColorRect" parent="UI"]
 layout_mode = 0
 offset_right = 720.0
 offset_bottom = 1280.0
 color = Color(0.008, 0.773, 0.478, 1.0)
 
-[node name="TopCard" type="ColorRect" parent="Canvas/UI"]
+[node name="TopCard" type="ColorRect" parent="UI"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 40.0
@@ -26,7 +25,7 @@ offset_right = 690.0
 offset_bottom = 160.0
 color = Color(0.988, 0.953, 0.898, 1.0)
 
-[node name="Title" type="Label" parent="Canvas/UI"]
+[node name="Title" type="Label" parent="UI"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 55.0
@@ -37,7 +36,7 @@ horizontal_alignment = 1
 theme_override_font_sizes/font_size = 38
 theme_override_colors/font_color = Color(0.973, 0.996, 0.024, 1.0)
 
-[node name="Subtitle" type="Label" parent="Canvas/UI"]
+[node name="Subtitle" type="Label" parent="UI"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 105.0
@@ -48,7 +47,7 @@ horizontal_alignment = 1
 theme_override_font_sizes/font_size = 14
 theme_override_colors/font_color = Color(0.45, 0.1, 0.02, 1.0)
 
-[node name="Coins" type="Label" parent="Canvas/UI"]
+[node name="Coins" type="Label" parent="UI"]
 layout_mode = 0
 offset_left = 50.0
 offset_top = 175.0
@@ -59,7 +58,7 @@ horizontal_alignment = 1
 theme_override_font_sizes/font_size = 20
 theme_override_colors/font_color = Color(0.973, 0.996, 0.024, 1.0)
 
-[node name="XP" type="Label" parent="Canvas/UI"]
+[node name="XP" type="Label" parent="UI"]
 layout_mode = 0
 offset_left = 225.0
 offset_top = 175.0
@@ -70,7 +69,7 @@ horizontal_alignment = 1
 theme_override_font_sizes/font_size = 20
 theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
 
-[node name="RPP" type="Label" parent="Canvas/UI"]
+[node name="RPP" type="Label" parent="UI"]
 layout_mode = 0
 offset_left = 400.0
 offset_top = 175.0
@@ -81,7 +80,7 @@ horizontal_alignment = 1
 theme_override_font_sizes/font_size = 20
 theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
 
-[node name="Lives" type="Label" parent="Canvas/UI"]
+[node name="Lives" type="Label" parent="UI"]
 layout_mode = 0
 offset_left = 575.0
 offset_top = 175.0
@@ -92,7 +91,7 @@ horizontal_alignment = 1
 theme_override_font_sizes/font_size = 20
 theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
 
-[node name="MainCard" type="ColorRect" parent="Canvas/UI"]
+[node name="MainCard" type="ColorRect" parent="UI"]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 230.0
@@ -100,7 +99,7 @@ offset_right = 680.0
 offset_bottom = 850.0
 color = Color(0.988, 0.953, 0.898, 1.0)
 
-[node name="BtnPlay" type="Button" parent="Canvas/UI"]
+[node name="BtnPlay" type="Button" parent="UI"]
 layout_mode = 0
 offset_left = 70.0
 offset_top = 500.0
@@ -109,7 +108,7 @@ offset_bottom = 570.0
 text = "▶  PLAY"
 theme_override_font_sizes/font_size = 24
 
-[node name="BtnAlbum" type="Button" parent="Canvas/UI"]
+[node name="BtnAlbum" type="Button" parent="UI"]
 layout_mode = 0
 offset_left = 70.0
 offset_top = 590.0
@@ -118,7 +117,7 @@ offset_bottom = 650.0
 text = "📇  Album PSS"
 theme_override_font_sizes/font_size = 22
 
-[node name="BtnShop" type="Button" parent="Canvas/UI"]
+[node name="BtnShop" type="Button" parent="UI"]
 layout_mode = 0
 offset_left = 70.0
 offset_top = 670.0
@@ -127,7 +126,7 @@ offset_bottom = 730.0
 text = "🛒  Shop"
 theme_override_font_sizes/font_size = 22
 
-[node name="BtnLeaderboard" type="Button" parent="Canvas/UI"]
+[node name="BtnLeaderboard" type="Button" parent="UI"]
 layout_mode = 0
 offset_left = 70.0
 offset_top = 750.0
@@ -136,7 +135,7 @@ offset_bottom = 810.0
 text = "🏆  Leaderboard"
 theme_override_font_sizes/font_size = 22
 
-[node name="Season" type="Label" parent="Canvas/UI"]
+[node name="Season" type="Label" parent="UI"]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 1240.0
