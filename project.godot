@@ -7,9 +7,9 @@
 ;   param=value ; assign values to parameters
 config_version=5
 [application]
+run/main_scene="res://scenes/01_splash.tscn"
 config/name="Falcao Saga"
 config/description="Match-3 puzzle game celebrating PSS Sleman history. Collect player cards and jerseys from every season — from the Super League era back to the legendary founding year 1976."
-run/main_scene="res://scenes/test_game.tscn"
 [rendering]
 textures/canvas_textures/default_texture_filter=0
 textures/vram_compression/import_etc2_astc=true

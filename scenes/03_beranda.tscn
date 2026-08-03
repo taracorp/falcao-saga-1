@@ -1,0 +1,251 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/beranda.gd" id="1_s"]
+
+[node name="Beranda" type="Control"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+script = ExtResource("1_s")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.075, 0.675, 0.361, 1.0)
+
+[node name="TopTime" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 18.0
+offset_right = 100.0
+offset_bottom = 48.0
+text = "9:30"
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1,1,1,0.8)
+
+[node name="TopTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 14.0
+offset_right = 540.0
+offset_bottom = 50.0
+text = "FALCAO SAGA"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(1,0.843,0,1)
+
+[node name="Coins" type="Label" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 14.0
+offset_right = 630.0
+offset_bottom = 48.0
+text = "3260"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1,0.843,0,1)
+
+[node name="RPP" type="Label" parent="."]
+layout_mode = 0
+offset_left = 635.0
+offset_top = 14.0
+offset_right = 700.0
+offset_bottom = 48.0
+text = "640"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0,0.8,1,1)
+
+[node name="PlayerCard" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 65.0
+offset_right = 705.0
+offset_bottom = 175.0
+color = Color(1,1,1,0.13)
+
+[node name="PlayerName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 80.0
+offset_right = 500.0
+offset_bottom = 115.0
+text = "Bagas_Elang"
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1,1,1,1)
+
+[node name="PlayerLvl" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 118.0
+offset_right = 500.0
+offset_bottom = 145.0
+text = "Level 14  •  15420 XP"
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1,1,1,0.7)
+
+[node name="SeasonCard" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 190.0
+offset_right = 705.0
+offset_bottom = 300.0
+color = Color(1,1,1,0.1)
+
+[node name="SeasonTag" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 200.0
+offset_right = 500.0
+offset_bottom = 225.0
+text = "Season 1  •  2024–2026"
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(1,0.843,0,0.9)
+
+[node name="SeasonName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 225.0
+offset_right = 500.0
+offset_bottom = 260.0
+text = "Super League"
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1,1,1,1)
+
+[node name="SeasonProgress" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 265.0
+offset_right = 500.0
+offset_bottom = 290.0
+text = "12/18 kartu terkumpul"
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1,1,1,0.7)
+
+[node name="BtnMain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 330.0
+offset_right = 620.0
+offset_bottom = 410.0
+text = "MAIN!"
+theme_override_font_sizes/font_size = 32
+
+[node name="StatsBar" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 440.0
+offset_right = 705.0
+offset_bottom = 500.0
+color = Color(1,1,1,0.1)
+
+[node name="StatLvl" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 448.0
+offset_right = 235.0
+offset_bottom = 492.0
+text = "14\nLevel"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1,1,1,0.9)
+
+[node name="StatStreak" type="Label" parent="."]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 448.0
+offset_right = 455.0
+offset_bottom = 492.0
+text = "5\nWin Streak"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1,1,1,0.9)
+
+[node name="StatCards" type="Label" parent="."]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 448.0
+offset_right = 675.0
+offset_bottom = 492.0
+text = "15\nKartu"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1,1,1,0.9)
+
+[node name="DailyBox" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 515.0
+offset_right = 705.0
+offset_bottom = 565.0
+color = Color(1,0.843,0,0.12)
+
+[node name="DailyText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 522.0
+offset_right = 550.0
+offset_bottom = 555.0
+text = "Challenge harian: Selesaikan 3 level"
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1,1,1,0.9)
+
+[node name="DailyXP" type="Label" parent="."]
+layout_mode = 0
+offset_left = 580.0
+offset_top = 522.0
+offset_right = 690.0
+offset_bottom = 555.0
+text = "+25 XP"
+horizontal_alignment = 2
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1,0.843,0,1)
+
+[node name="NavBar" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 1220.0
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.05, 0.38, 0.2, 1.0)
+
+[node name="Nav1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 1224.0
+offset_right = 144.0
+offset_bottom = 1276.0
+text = "Koleksi"
+
+[node name="Nav2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 1224.0
+offset_right = 288.0
+offset_bottom = 1276.0
+text = "Toko"
+
+[node name="Nav3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 1224.0
+offset_right = 432.0
+offset_bottom = 1276.0
+text = "Beranda"
+
+[node name="Nav4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 1224.0
+offset_right = 576.0
+offset_bottom = 1276.0
+text = "Peringkat"
+
+[node name="Nav5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 580.0
+offset_top = 1224.0
+offset_right = 716.0
+offset_bottom = 1276.0
+text = "Profil"

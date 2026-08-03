@@ -1,0 +1,106 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/login.gd" id="1_s"]
+
+[node name="Login" type="Control"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+script = ExtResource("1_s")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.075, 0.675, 0.361, 1.0)
+
+[node name="TopTime" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 120.0
+offset_bottom = 50.0
+text = "9:30"
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.8)
+
+[node name="Logo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 120.0
+offset_right = 660.0
+offset_bottom = 200.0
+text = "FALCAO"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(1.0, 0.843, 0.0, 1.0)
+
+[node name="Logo2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 190.0
+offset_right = 660.0
+offset_bottom = 250.0
+text = "Falcao Saga"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.9)
+
+[node name="Card" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 320.0
+offset_right = 680.0
+offset_bottom = 700.0
+color = Color(1.0, 1.0, 1.0, 0.12)
+
+[node name="Heading" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 360.0
+offset_right = 660.0
+offset_bottom = 410.0
+text = "Masuk"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+
+[node name="Desc" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 415.0
+offset_right = 660.0
+offset_bottom = 460.0
+text = "Simpan progres, kartu & RPP kamu di cloud."
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.7)
+
+[node name="BtnGoogle" type="Button" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 500.0
+offset_right = 640.0
+offset_bottom = 565.0
+text = "Masuk dengan Google"
+theme_override_font_sizes/font_size = 20
+
+[node name="BtnTamu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 585.0
+offset_right = 640.0
+offset_bottom = 650.0
+text = "Main sebagai Tamu"
+theme_override_font_sizes/font_size = 20
+
+[node name="Terms" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 1200.0
+offset_right = 660.0
+offset_bottom = 1260.0
+text = "Dengan masuk, kamu menyetujui Ketentuan Layanan & Kebijakan Privasi."
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.4)

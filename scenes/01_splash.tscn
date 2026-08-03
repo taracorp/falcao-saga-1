@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/splash.gd" id="1_s"]
+
+[node name="Splash" type="Control"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+script = ExtResource("1_s")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.075, 0.675, 0.361, 1.0)
+
+[node name="Eagle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 180.0
+offset_right = 560.0
+offset_bottom = 460.0
+text = "🦅"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 200
+
+[node name="Line1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 480.0
+offset_right = 660.0
+offset_bottom = 570.0
+text = "FALCAO"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 72
+theme_override_colors/font_color = Color(1.0, 0.843, 0.0, 1.0)
+
+[node name="Line2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 555.0
+offset_right = 660.0
+offset_bottom = 640.0
+text = "SAGA"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 72
+theme_override_colors/font_color = Color(1.0, 0.843, 0.0, 1.0)
+
+[node name="Sub" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 660.0
+offset_right = 660.0
+offset_bottom = 695.0
+text = "PSS Sleman  •  Super Elang Jawa"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 0.8)
+
+[node name="Btn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 850.0
+offset_right = 560.0
+offset_bottom = 930.0
+text = "MULAI!"
+theme_override_font_sizes/font_size = 28
