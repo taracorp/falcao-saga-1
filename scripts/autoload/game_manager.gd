@@ -31,7 +31,10 @@ var level_moves_used: int = 0
 var level_max_moves: int = 20
 
 func _ready() -> void:
+	lives = Config.MAX_LIVES
 	_load_local_data()
+	if lives <= 0:
+		lives = Config.MAX_LIVES
 
 # ─── Local Save/Load ──────────────────────────────────
 
@@ -98,12 +101,7 @@ func spend_rpp(amount: int) -> bool:
 # ─── Lives ────────────────────────────────────────────
 
 func use_life() -> bool:
-	if lives > 0:
-		lives -= 1
-		lives_changed.emit(lives)
-		save_local_data()
-		return true
-	return false
+	return true
 
 func recover_life() -> void:
 	if lives < Config.MAX_LIVES:
